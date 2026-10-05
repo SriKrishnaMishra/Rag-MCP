@@ -1,0 +1,13 @@
+.git
+.venv
+venv
+__pycache__
+**/__pycache__
+.pytest_cache
+.env
+.env.*
+backups
+data
+tests
+mcp_rag_engineer.egg-info
+*.py[cod]

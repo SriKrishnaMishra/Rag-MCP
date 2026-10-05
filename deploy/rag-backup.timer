@@ -1,0 +1,11 @@
+[Unit]
+Description=Run the RAG backup once per day
+
+[Timer]
+OnCalendar=*-*-* 02:00:00
+Persistent=true
+RandomizedDelaySec=20m
+Unit=rag-backup.service
+
+[Install]
+WantedBy=timers.target
