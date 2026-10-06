@@ -90,7 +90,7 @@ def _redact_output(text: str) -> str:
 
 def _target(root: Path, relative_path: str) -> Path:
     root = root.resolve()
-    requested = Path(relative_path)
+    requested = Path(relative_path.replace("\\", "/"))
     if requested.is_absolute():
         raise ValueError("path must be relative to the selected repository")
     candidate = (root / requested).resolve()
